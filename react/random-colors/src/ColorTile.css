@@ -1,0 +1,10 @@
+.color-tile {
+    width: 12.5%;
+    height: 25%;
+    background-color: orange;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: 0.35s all ease-out;
+}

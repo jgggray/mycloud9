@@ -1,0 +1,8 @@
+.color-tray {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 75vh;
+    border: 1px solid red;
+    flex-wrap: wrap;
+}
