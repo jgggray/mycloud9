@@ -1,0 +1,30 @@
+button {
+  transition: 0.2s all ease-out;
+  cursor: pointer;
+}
+
+.recipe-zone h1{
+    text-transform: uppercase;
+    font-size: 32px;
+    text-align: center;
+}
+
+.recipe-tray {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.recipe-tray>*:not(:nth-child(3n))
+{
+    /*margin-right: 20px;*/
+}
