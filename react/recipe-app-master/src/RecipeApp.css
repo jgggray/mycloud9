@@ -1,0 +1,76 @@
+/* GEN */
+:root {
+    --trans: 0.35s all ease-out;
+}
+
+ul, li {
+    box-sizing: border-box;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+button, ul li{
+    cursor: pointer;
+}
+
+/* nav */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #eee;
+  color: #444;
+  height: 60px;
+}
+
+nav>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+nav li {
+    padding: 0px 20px;
+    /*background-color: red;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+nav ul, nav li {
+    height: 100%;
+} 
+
+nav a {
+    position: relative;
+    transition: var(--trans);
+    /*padding-bottom: 2px;*/
+}
+
+nav a:before {
+    transition: var(--trans);
+    content: "";
+    height: 2px;
+    background-color: #444;
+    width: 1%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transform: translate(0, 3px);
+}
+
+nav a:hover:before {
+    width: 100%;
+    opacity: 1;
+}
