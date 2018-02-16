@@ -40,6 +40,7 @@ class RecipeApp extends Component {
         //functions
         this.spawnForm = this.spawnForm.bind(this);
         this.handleNewRecipe = this.handleNewRecipe.bind(this);
+        this.handleDeleteRecipe = this.handleDeleteRecipe.bind(this);
     }//con
     spawnForm(){
         this.setState({ showForm: true });
@@ -48,11 +49,16 @@ class RecipeApp extends Component {
         var updatedRecipes = [...this.state.recipes, newItem];
         this.setState({recipes: updatedRecipes, showForm: false});
     }//def
+    handleDeleteRecipe(recipeId){
+        var recipesCopy = this.state.recipes.slice();
+        var newRecipeSet = recipesCopy.filter( (r, index) => index !== recipeId);
+        this.setState({recipes: newRecipeSet});
+    }//def
     render(){
         return (<div>
             <NavBar formHandler={this.spawnForm} />
             { this.state.showForm ? <RecipeInput newRecipe={this.handleNewRecipe} /> : null}
-            <RecipeTray recipes={this.state.recipes} />
+            <RecipeTray recipes={this.state.recipes} deleteRecipe={this.handleDeleteRecipe} />
         </div>);
     }//rend
 }//cla
