@@ -41,6 +41,7 @@ class RecipeApp extends React.Component {
         };//state
         this.formOn = this.formOn.bind(this);
         this.onSave = this.onSave.bind(this);
+        this.onDelete = this.onDelete.bind(this);
     }//con
     formOn(){
         this.setState({showForm: true});
@@ -48,11 +49,16 @@ class RecipeApp extends React.Component {
     onSave(newRecipe){
         this.setState({ recipes: [...this.state.recipes, newRecipe] ,showForm: false});
     }//onSave
+    onDelete(deleteId){
+        // alert("onDelete deleteId: " + deleteId);
+        var newRecipeSet = this.state.recipes.filter( (r, i) => i !== deleteId );
+        this.setState({recipes: newRecipeSet});
+    }//onDelete
     render(){
         return (<div>
             <NavBar formOn={this.formOn} />
             { this.state.showForm ? <RecipeInput onSave={this.onSave} /> : null }
-            <RecipeTray recipes={this.state.recipes}  />
+            <RecipeTray recipes={this.state.recipes} onDelete={this.onDelete} />
         </div>);
     }//rend
 }//cla
