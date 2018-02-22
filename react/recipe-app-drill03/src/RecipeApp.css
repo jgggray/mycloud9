@@ -1,0 +1,162 @@
+body {
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+
+button, li {
+    transition: 0.22s all ease-out;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+ul, li, button {
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+button {
+    border: none;
+}
+
+/*nav*/
+
+nav {
+    height: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+nav ul li {
+    height: 100%;
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 12px;
+    cursor: pointer;
+}
+
+nav ul li:before {
+    content: "";
+    height: 2px;
+    background-color: white;
+    width: 100%;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.22s all ease-out;
+    
+    transform: scaleX(0);
+}
+
+nav ul li:hover:before {
+    transform: scaleX(1);
+}
+
+/*form*/
+
+form {
+    margin: 0 auto;
+    width: 350px;
+    border: 2px solid #4488cc;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+form input {
+    height: 36px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+form>input, form>button, .modify-ingredients {
+    margin-bottom: 12px;
+}
+
+.modify-ingredients>button {
+    border: none;
+    width: 50px;
+    color: white;
+    font-weight: bold;
+
+    border-radius: 5px;
+    height: 30px;
+}
+
+
+
+#add-ingredient {
+    background-color: #66ccaa;
+}
+
+#remove-ingredient {
+    background-color: #ee5566;
+}
+
+/* recipe card */
+.recipe-tray {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.recipe-card {
+    width: 33.332%;
+}
+
+.recipe-card-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.recipe-card-img img {
+    width: 100%;
+}
+
+.recipe-card-content {
+    padding: 20px;
+}
+
+.recipe-card .btn {
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: inherit;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    height: 24px;
+}
+
+.recipe-card .btn:hover {
+    background-color: #ee5566;
+}
+
+
