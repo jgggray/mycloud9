@@ -1,0 +1,132 @@
+:root {
+    --color-teal: #66c0d0;
+    --color-teal-dark: #5599aa;
+}
+
+body {
+    background-color: #ddd;
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+li, button, input {
+    transition: 0.35s all ease-out;
+}
+
+nav li, button {
+    cursor: pointer;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+ul, li {
+    box-sizing: border-box;
+}
+
+/*button*/
+button {
+    border: none;
+    background-color: var(--color-teal);
+    color: white;
+    height: 40px;
+}
+
+/*nav*/
+nav {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: black;
+    color: white;
+}
+
+nav ul, nav li{
+    height: 100%;
+}
+
+nav>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+nav li {
+    padding: 0 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+
+nav li:hover {
+    color: black;
+    background-color: white;
+}
+
+/*FORM*/
+
+form {
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 3px #aaa;
+    border-radius: 10px;
+    width: 340px;
+    background-color: white;
+}
+
+form>h2 {
+    text-transform: uppercase;
+}
+
+input {
+    height: 40px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 10px;
+}
+
+input:not(:last-child){
+    margin-bottom: 10px;
+}
+
+input:focus {
+    color: var(--color-teal);
+}
+
+form>button {
+    width: 100%;
+    border-radius: 6px;
+}
+
+form>button:hover {
+    background-color: var(--color-teal-dark);
+}
+
+.flash {
+    border-radius: 5px;
+    color: white;
+    box-sizing: border-box;
+    padding: 12px;
+}
+
+.flash.success {
+    background-color: green;
+}
+
+.flash.error {
+    background-color: red;
+}
