@@ -1,0 +1,17 @@
+body {
+    font-family: sans-serif;
+}
+
+.flash {
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+}
+
+.flash.error {
+    background-color: red;
+}
+
+.flash.success {
+    background-color: green;
+}
