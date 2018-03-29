@@ -1,0 +1,95 @@
+:root {
+    --trans-main: 0.22s all ease-out;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+li, nav li:before {
+    transition: var(--trans-main);
+}
+
+ul, li, body {
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+    color: white;
+    background-color: black;
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+    height: 100%;
+}
+
+nav li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    
+    position: relative;
+}
+
+nav li:before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+}
+
+nav li:hover:before {
+    /*background-color: white;*/
+    /*color: black;*/
+    
+    transform: scaleX(1);
+}
+
+
+
+
+/*flash*/
+.flash {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;
+    border-radius: 5px;
+}
+
+.flash.error {
+    background-color: red;
+}
+.flash.success {
+    background-color: green;
+}

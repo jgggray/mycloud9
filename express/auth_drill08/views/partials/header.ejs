@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/style.css" type="text/css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <% if(!currentUser){ %>
+                    <li><a href="/register">Sign Up</a></li>
+                    <li><a href="/login">Log In</a></li>
+                <% } else { %>
+                    <li><a>Welcome, <%= currentUser.username %>!</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                <% } %>
+            </ul>
+        </nav>
+        <% if(!!flashError && flashError.length > 0) { %>
+            <p class="flash error"><%= flashError %></p>
+        <% } %>
+        <% if(!!flashSuccess && flashSuccess.length > 0) { %>
+            <p class="flash success"><%= flashSuccess %></p>
+        <% } %>
+    </header>
+    
