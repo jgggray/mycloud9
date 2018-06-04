@@ -1,0 +1,65 @@
+body {
+    font-family: sans-serif;
+}
+
+body, ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    height: 50px;
+    background-color: black;
+    color:white;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+nav>ul li {
+    height: 100%;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 0.5s ease-out;
+}
+
+ul li:hover {
+    color: black;
+    background-color: white;
+}
+
+/*flash*/
+.flash {
+    color: white;
+    border-radius: 5px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    height: 30px;
+}
+.flash.error {
+    background-color: red;
+}
+.flash.success {
+    background-color: green;
+}
